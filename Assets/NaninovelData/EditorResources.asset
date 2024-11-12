@@ -197,3 +197,11 @@ MonoBehaviour:
     - name: Forest
       pathPrefix: Backgrounds/MainBackground
       guid: d86fc69c88178344da1713ced39d663c
+  - Id: Audio
+    Resources:
+    - name: Bubbles
+      pathPrefix: Audio
+      guid: e85dbb855afa7d94e87fde00bec9782b
+    - name: Wind
+      pathPrefix: Audio
+      guid: 0f6ebe1673ca5fe4fae4e147d254cd76
