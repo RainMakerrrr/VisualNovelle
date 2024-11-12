@@ -1,8 +1,31 @@
 @back Forest
 @char Kohaku.Default
+@showUI ScoreCounterUI
+@bgm Wind volume:0.5 loop:true
 
 Kohaku: Привет! Не хочешь помочь мне с одним заданием? За это обещаю вознаграждение!
-@choice "Да, конечно, с радостью помогу."
-@choice "Нет, откажусь"
+@choice "Да, конечно, с радостью помогу." goto:.Accept
+@choice "Нет, откажусь" goto:.Refuse
 @stop
+
+# Accept
+@addScore value:15
+@char Kohaku.Happy
+Kohaku: Очень рада, что ты согласился
+@hideChars
+@hideUI
+@back Forest.Crossfade
+@back Desert
+@loadScene FindMatch
+@stop
+
+# Refuse
+@addScore value:5
+@char Kohaku.Surprise
+Kohaku: Очень жаль, но думаю ты передумаешь
+@back Forest.Crossfade
+@back Desert
+@hideChars
+@hideUI
+@loadScene FindMatch
 @stop
