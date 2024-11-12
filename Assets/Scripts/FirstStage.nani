@@ -16,7 +16,7 @@ Kohaku: Очень рада, что ты согласился
 @hidePrinter
 @back Forest.Crossfade
 @back Desert
-@loadScene FindMatch
+@startMatchGame
 @stop
 
 # Refuse
@@ -27,5 +27,5 @@ Kohaku: Очень жаль, но думаю ты передумаешь
 @back Desert
 @hideChars
 @hidePrinter
-@loadScene FindMatch
+@startMatchGame
 @stop
