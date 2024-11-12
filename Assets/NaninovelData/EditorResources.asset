@@ -149,3 +149,48 @@ MonoBehaviour:
     - name: FirstStage
       pathPrefix: Scripts
       guid: 0d4525b68b8244f4eac4cbddd0d5424a
+  - Id: Characters/232f1bd6-58f0-45b6-bc48-6a4b2c60a38d
+    Resources:
+    - name: Angry
+      pathPrefix: Characters/Kohaku
+      guid: 3eb2f3cda74a8f54190bd19e4822507f
+    - name: Confidence
+      pathPrefix: Characters/Kohaku
+      guid: 8bf71bff857c18d42a8f7cd5629d8a78
+    - name: Default
+      pathPrefix: Characters/Kohaku
+      guid: b199676cfa2c48449bc8a10296f859ea
+    - name: Happy
+      pathPrefix: Characters/Kohaku
+      guid: f9f54bcf8c54048479bbad5a1d0652af
+    - name: Pain
+      pathPrefix: Characters/Kohaku
+      guid: 14948008e6821b84886a82ce57f1af7d
+    - name: Surprise
+      pathPrefix: Characters/Kohaku
+      guid: 8a05c81015a4b214c87ee73dcd1fac84
+  - Id: Characters/8fde525d-1a21-446c-befd-e18f79c99dbf
+    Resources:
+    - name: Confidence
+      pathPrefix: Characters/Nanikun
+      guid: 4ae4311c9cd60cb4482b02705e43935c
+    - name: Default
+      pathPrefix: Characters/Nanikun
+      guid: 8c1a754940eaa524b8d66d4e06fed3aa
+    - name: Happy
+      pathPrefix: Characters/Nanikun
+      guid: 7240628b1bf07a642955bcb15d918a9a
+    - name: Pain
+      pathPrefix: Characters/Nanikun
+      guid: 16eed8a7bf05cad4ea3bd3929a2a321e
+    - name: Surprise
+      pathPrefix: Characters/Nanikun
+      guid: 3ce9674d67f8afa48853930cc7804043
+  - Id: Backgrounds/dbbab7d6-37f9-43bb-9c66-1ccfac0c8094
+    Resources:
+    - name: Desert
+      pathPrefix: Backgrounds/MainBackground
+      guid: 1f0c74defe9019e4bbb1562a1cc58705
+    - name: Forest
+      pathPrefix: Backgrounds/MainBackground
+      guid: d86fc69c88178344da1713ced39d663c
