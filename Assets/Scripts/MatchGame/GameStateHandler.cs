@@ -31,10 +31,6 @@ namespace MatchGame
         private async void OnAllCardsMatched()
         {
             AddScore();
-
-            await Engine.GetService<IScriptPlayer>().PreloadAndPlayAsync(FinishScriptName);
-            
-            SceneManager.LoadScene(0);
         }
 
         private void AddScore()

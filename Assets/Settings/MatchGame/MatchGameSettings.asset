@@ -12,5 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e948f490d7fb648bdc6b210dc6042f, type: 3}
   m_Name: MatchGameSettings
   m_EditorClassIdentifier: 
-  _boardSize: {x: 0, y: 0}
-  _data: []
+  _boardSize: {x: 4, y: 3}
+  _data:
+  - Id: crystal
+    Sprite: {fileID: 21300000, guid: 8b81eefeabef940448b2fb4c6ee0fbcb, type: 3}
+  - Id: dark
+    Sprite: {fileID: 21300000, guid: 3165e320220a2d84db9f0644fcb8e2cf, type: 3}
+  - Id: fire
+    Sprite: {fileID: 21300000, guid: ef080dfbf69c87b49b1e3a636e3f7b17, type: 3}
+  - Id: leaf
+    Sprite: {fileID: 21300000, guid: 31cb0a90927caa14b8815b1378630012, type: 3}
+  - Id: star
+    Sprite: {fileID: 21300000, guid: 4f944fe7434594442ad51084ccd0fbaf, type: 3}
+  - Id: water
+    Sprite: {fileID: 21300000, guid: 92764a6fd974510448b5d8e6484972bb, type: 3}

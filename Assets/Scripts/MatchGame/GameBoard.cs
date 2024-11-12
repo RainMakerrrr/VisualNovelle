@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using MatchGame.Configs;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -8,19 +9,19 @@ namespace MatchGame
 {
     public class GameBoard : MonoBehaviour
     {
-        [SerializeField] private GridLayoutGroup _gridLayout;
+        [SerializeField] private Transform _root;
         [SerializeField] private MatchCard _cardPrefab;
         [SerializeField] private MatchGameSettings _matchGameSettings;
 
         private List<MatchCard> _cards = new List<MatchCard>();
 
         public List<MatchCard> Cards => _cards;
-        
+
         public void Init()
         {
             for (int i = 0; i < _matchGameSettings.BoardSize; i++)
             {
-                MatchCard matchCard = Instantiate(_cardPrefab, _gridLayout.transform);
+                MatchCard matchCard = Instantiate(_cardPrefab, _root.transform);
                 _cards.Add(matchCard);
             }
 
@@ -38,7 +39,7 @@ namespace MatchGame
                     dataIndex++;
                 }
             }
-            
+
             ShuffleCards();
         }
 
