@@ -11,6 +11,7 @@ namespace MatchGame
 
         [SerializeField] private Image _image;
         [SerializeField] private Button _button;
+        [SerializeField] private float _animationDuration = 0.5f;
         public string Id { get; private set; }
 
         private Sprite _icon;
@@ -46,20 +47,20 @@ namespace MatchGame
             _sequence = DOTween.Sequence();
             _sequence.SetTarget(this);
 
-            _sequence.Join(transform.DORotate(new Vector3(0f, 180f, 0f), 0.5f).SetEase(Ease.Linear));
-            _sequence.InsertCallback(0.25f, () => _image.sprite = _icon);
+            _sequence.Join(transform.DORotate(new Vector3(0f, 180f, 0f), _animationDuration).SetEase(Ease.Linear));
+            _sequence.InsertCallback(_animationDuration / 2, () => _image.sprite = _icon);
         }
 
         public void Hide()
         {
-            _button.interactable = true;
-
             _sequence?.Kill();
             _sequence = DOTween.Sequence();
             _sequence.SetTarget(this);
 
-            _sequence.Join(transform.DORotate(Vector3.zero, 0.5f).SetEase(Ease.Linear));
-            _sequence.InsertCallback(0.25f, () => _image.sprite = _coverSprite);
+            _sequence.Join(transform.DORotate(Vector3.zero, _animationDuration).SetEase(Ease.Linear));
+            _sequence.InsertCallback(_animationDuration / 2, () => _image.sprite = _coverSprite);
+
+            _sequence.OnComplete(() => _button.interactable = true);
         }
     }
 }

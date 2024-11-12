@@ -1,4 +1,5 @@
-﻿using Naninovel;
+﻿using System;
+using Naninovel;
 using Score;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,7 @@ namespace MatchGame
         [SerializeField] private float _minTime;
         [SerializeField] private float _normalTime;
         [SerializeField] private float _maxTime;
+        [SerializeField] private float _delayBeforeEnd;
 
         private BoardController _boardController;
         private Timer _timer;
@@ -33,6 +35,8 @@ namespace MatchGame
         {
             AddScore();
 
+            await UniTask.Delay(TimeSpan.FromSeconds(_delayBeforeEnd));
+            
             await Engine.GetService<IScriptPlayer>().PreloadAndPlayAsync(FinishScriptName);
             
             SceneManager.LoadScene(MainScene);

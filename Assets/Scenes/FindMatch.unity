@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 912754944}
   - component: {fileID: 912754947}
   - component: {fileID: 912754948}
+  - component: {fileID: 912754949}
   m_Layer: 5
   m_Name: GameBoard
   m_TagString: Untagged
@@ -345,6 +346,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7597b65d7743fd3498a1828225c005c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvasGroup: {fileID: 912754949}
+  _delayForShow: 0.75
+--- !u!225 &912754949
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912754942}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1116765296
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +538,7 @@ MonoBehaviour:
   _minTime: 45
   _normalTime: 60
   _maxTime: 100
+  _delayBeforeEnd: 1
 --- !u!4 &2080543401
 Transform:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ Kohaku: Привет! Не хочешь помочь мне с одним зад
 @char Kohaku.Happy
 Kohaku: Очень рада, что ты согласился
 @hideChars
-@hideUI
+@hidePrinter
 @back Forest.Crossfade
 @back Desert
 @loadScene FindMatch
@@ -26,6 +26,6 @@ Kohaku: Очень жаль, но думаю ты передумаешь
 @back Forest.Crossfade
 @back Desert
 @hideChars
-@hideUI
+@hidePrinter
 @loadScene FindMatch
 @stop

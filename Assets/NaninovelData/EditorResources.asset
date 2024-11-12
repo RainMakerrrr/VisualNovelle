@@ -152,6 +152,9 @@ MonoBehaviour:
     - name: FirstStage
       pathPrefix: Scripts
       guid: 0d4525b68b8244f4eac4cbddd0d5424a
+    - name: Finish
+      pathPrefix: Scripts
+      guid: 98fc266625f6a714fbb633a9a11d8bff
   - Id: Characters/232f1bd6-58f0-45b6-bc48-6a4b2c60a38d
     Resources:
     - name: Angry

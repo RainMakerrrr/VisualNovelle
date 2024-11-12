@@ -8,20 +8,25 @@ namespace MatchGame
 {
     public class BoardController : MonoBehaviour
     {
+        private const string BubblesSound = "Bubbles";
         public event Action AllCardsMatched;
-        
+
+        [SerializeField] private CanvasGroup _canvasGroup;
+        [SerializeField] private float _delayForShow = 0.75f;
+
         private List<MatchCard> _cards = new List<MatchCard>();
 
         private MatchCard _selected;
 
         private int _counter;
         private int _maxCount;
-        
+
+
         public void Init(List<MatchCard> cards)
         {
             _cards = cards;
             _maxCount = _cards.Count / 2;
-            
+
             foreach (MatchCard matchCard in _cards)
             {
                 matchCard.CardClicked += OnCardClicked;
@@ -46,11 +51,11 @@ namespace MatchGame
             }
 
             matchCard.Show();
-            
+
             if (_selected.Id == matchCard.Id)
             {
-                //Engine.GetService<IAudioManager>().PlaySfxAsync("Bubbles").Forget();
-                
+                Engine.GetService<IAudioManager>().PlaySfxAsync(BubblesSound).Forget();
+
                 _counter++;
                 if (_counter == _maxCount)
                 {
@@ -67,8 +72,14 @@ namespace MatchGame
 
         private async void HideCards(params MatchCard[] cards)
         {
-            await UniTask.Delay(TimeSpan.FromSeconds(0.75f));
-            
+            _canvasGroup.interactable = false;
+            _canvasGroup.blocksRaycasts = false;
+
+            await UniTask.Delay(TimeSpan.FromSeconds(_delayForShow));
+
+            _canvasGroup.interactable = true;
+            _canvasGroup.blocksRaycasts = true;
+
             foreach (MatchCard matchCard in cards)
             {
                 matchCard.Hide();

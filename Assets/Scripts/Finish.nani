@@ -1,0 +1,17 @@
+@back Forest
+@char Kohaku.Default
+@resetText
+@showPrinter
+@checkScore value:20 then:.GoodEnding else:.BadEnding
+
+# GoodEnding
+@char Kohaku.Happy
+Kohaku: Ты молодец! Отлично постарался
+@title
+@stop
+
+# BadEnding
+@char Kohaku.Angry
+Kohaku: Мог бы и лучше!
+@title
+@stop
